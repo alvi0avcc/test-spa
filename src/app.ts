@@ -47,14 +47,17 @@ export default class App {
     this.clearView();
     switch (hash) {
       case '/':
-        history.pushState(null, '', '#/');
+        // history.pushState(null, '', '#/');
+        window.location.href = '#/';
         break;
 
       case '/next':
+        window.location.href = '#/next';
         break;
 
       default:
-        history.pushState(null, '', '#/404');
+        // history.pushState(null, '', '#/404');
+        window.location.href = '#/404';
         console.log('error 404');
         this.hash = '/404';
         break;
